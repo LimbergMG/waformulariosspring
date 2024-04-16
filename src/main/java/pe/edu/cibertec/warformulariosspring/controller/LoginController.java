@@ -15,7 +15,7 @@ public class LoginController {
     @GetMapping("/login")
     public String login(Model model){
         model.addAttribute("loginModel", new LoginModel());
-        model.addAttribute("mostrarMejsane", false);
+        model.addAttribute("mostrarMensaje", false);
         return "login";
     }
 
@@ -28,7 +28,7 @@ public class LoginController {
                     +loginModel.getUsuario());
             return "home";
         }
-        model.addAttribute("mostrarMejsane", true);
+        model.addAttribute("mostrarMensaje", true);
         model.addAttribute("mensaje","Usuario y/o password incorrecto");
         return "login";
 
